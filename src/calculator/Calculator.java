@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * @author calc.Roman Minevich
  * @version June 29, 2019
- **/
+ */
 public class Calculator implements Arabic, Roman {
     String expression, operator;
     String[] operands;
@@ -63,8 +63,7 @@ public class Calculator implements Arabic, Roman {
             calculator.setExpression();
             calculator.setOperator();
             calculator.setOperands();
-            if (calculator.operands.length > 1
-                    && calculator.checkArabic(calculator.operands[0])
+            if (calculator.checkArabic(calculator.operands[0])
                     && calculator.checkArabic(calculator.operands[1])) {
                 try {
                     calculator.operand1 = calculator.parseArabic(calculator.operands[0]);
@@ -73,9 +72,8 @@ public class Calculator implements Arabic, Roman {
                     calculator.print();
                 } catch (ArithmeticException e) {
                     System.out.println("Can't divide by zero");
-                }
-            } else if (calculator.operands.length > 1
-                    && calculator.checkRoman(calculator.operands[0])
+                    }
+            } else if (calculator.checkRoman(calculator.operands[0])
                     && calculator.checkRoman(calculator.operands[1])) {
                 calculator.operand1 = calculator.parseRoman(calculator.operands[0]);
                 calculator.operand2 = calculator.parseRoman(calculator.operands[1]);

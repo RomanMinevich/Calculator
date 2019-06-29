@@ -54,7 +54,7 @@ public class Calculator implements Arabic, Roman {
     }
 
     void print() {
-        System.out.println("= " + result + "\n");
+        System.out.printf("= %s\n\n", result);
     }
 
     public static void main(String[] args) {

@@ -7,10 +7,10 @@ public interface Arabic {
         for (String operand : operands) {
             switch (operand.length()) {
                 case 1:
-                    check += Character.isDigit(operand.charAt(0))? 1 : 0;
+                    check += Character.isDigit(operand.charAt(0)) ? 1 : 0;
                     break;
                 case 2:
-                    check += operand.equals("10")? 1 : 0;
+                    check += operand.equals("10") ? 1 : 0;
                     break;
             }
         }

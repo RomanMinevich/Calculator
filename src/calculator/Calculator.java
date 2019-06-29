@@ -1,6 +1,7 @@
 package calculator;
 
 import java.util.Scanner;
+
 /**
  * @author calc.Roman Minevich
  * @version June 29, 2019
@@ -71,7 +72,7 @@ public class Calculator implements Arabic, Roman {
                     calculator.print();
                 } catch (ArithmeticException e) {
                     System.out.println("Can't divide by zero\n");
-                    }
+                }
             } else if (calculator.checkRoman(calculator.operands)) {
                 calculator.operand1 = calculator.parseRoman(calculator.operands[0]);
                 calculator.operand2 = calculator.parseRoman(calculator.operands[1]);

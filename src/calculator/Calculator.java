@@ -63,8 +63,7 @@ public class Calculator implements Arabic, Roman {
             calculator.setExpression();
             calculator.setOperator();
             calculator.setOperands();
-            if (calculator.checkArabic(calculator.operands[0])
-                    && calculator.checkArabic(calculator.operands[1])) {
+            if (calculator.checkArabic(calculator.operands)) {
                 try {
                     calculator.operand1 = calculator.parseArabic(calculator.operands[0]);
                     calculator.operand2 = calculator.parseArabic(calculator.operands[1]);
@@ -73,8 +72,7 @@ public class Calculator implements Arabic, Roman {
                 } catch (ArithmeticException e) {
                     System.out.println("Can't divide by zero");
                     }
-            } else if (calculator.checkRoman(calculator.operands[0])
-                    && calculator.checkRoman(calculator.operands[1])) {
+            } else if (calculator.checkRoman(calculator.operands)) {
                 calculator.operand1 = calculator.parseRoman(calculator.operands[0]);
                 calculator.operand2 = calculator.parseRoman(calculator.operands[1]);
                 calculator.calculate();

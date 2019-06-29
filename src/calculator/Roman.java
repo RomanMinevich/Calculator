@@ -2,13 +2,15 @@ package calculator;
 
 interface Roman {
 
-    default boolean checkRoman(String operand) {
-        for (RomanNumerals numeral : RomanNumerals.values()) {
-            if (numeral.name().equals(operand)) {
-                return true;
+    default boolean checkRoman(String[] operands) {
+        for (String operand : operands) {
+            for (RomanNumerals numeral : RomanNumerals.values()) {
+                if (!numeral.name().equals(operand)) {
+                    return false;
+                }
             }
         }
-        return false;
+        return operands.length == 2;
     }
 
     default int parseRoman(String operand) {

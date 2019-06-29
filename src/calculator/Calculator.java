@@ -1,7 +1,5 @@
 package calculator;
-
 import java.util.Scanner;
-
 /**
  * @author calc.Roman Minevich
  * @version June 29, 2019

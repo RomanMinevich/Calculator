@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * @author calc.Roman Minevich
  * @version June 29, 2019
- **/
+ */
 public class Calculator implements Arabic, Roman {
     String expression, operator;
     String[] operands;

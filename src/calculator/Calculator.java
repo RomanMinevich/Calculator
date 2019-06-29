@@ -54,7 +54,7 @@ public class Calculator implements Arabic, Roman {
     }
 
     void print() {
-        System.out.println(operands[0] + " " + operator + " " + operands[1] + " = " + result + "\n");
+        System.out.println("= " + result + "\n");
     }
 
     public static void main(String[] args) {
@@ -70,7 +70,7 @@ public class Calculator implements Arabic, Roman {
                     calculator.calculate();
                     calculator.print();
                 } catch (ArithmeticException e) {
-                    System.out.println("Can't divide by zero");
+                    System.out.println("Can't divide by zero\n");
                     }
             } else if (calculator.checkRoman(calculator.operands)) {
                 calculator.operand1 = calculator.parseRoman(calculator.operands[0]);
@@ -79,7 +79,7 @@ public class Calculator implements Arabic, Roman {
                 calculator.result = calculator.resultToRoman(calculator.result);
                 calculator.print();
             } else {
-                System.out.println("Invalid expression");
+                System.out.println("Invalid expression\n");
             }
         }
     }

@@ -3,14 +3,13 @@ package calculator;
 interface Roman {
 
     default boolean checkRoman(String[] operands) {
+        int check = 0;
         for (String operand : operands) {
             for (RomanNumerals numeral : RomanNumerals.values()) {
-                if (!numeral.name().equals(operand)) {
-                    return false;
-                }
+                check += numeral.name().equals(operand) ? 1 : 0;
             }
         }
-        return operands.length == 2;
+        return check == 2 && operands.length == 2;
     }
 
     default int parseRoman(String operand) {

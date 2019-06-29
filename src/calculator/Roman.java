@@ -30,7 +30,6 @@ interface Roman {
                     int digit2 = Character.getNumericValue(result.charAt(1));
                     result = concat(digitToRoman(digit1), digitToRoman(digit2));
                 }
-
                 break;
             case 3:
                 result = "C";
@@ -39,7 +38,7 @@ interface Roman {
         return result;
     }
 
-    static String digitToRoman(int digit) {
+    default String digitToRoman(int digit) {
         for (RomanNumerals numeral : RomanNumerals.values()) {
             if (numeral.integer == digit) {
                 return numeral.name();
@@ -48,7 +47,7 @@ interface Roman {
         return null;
     }
 
-    static String concat(String digit1, String digit2) {
+    default String concat(String digit1, String digit2) {
         digit1 = digit1.replace('X', 'C');
         digit1 = digit1.replace('V', 'L');
         digit1 = digit1.replace('I', 'X');

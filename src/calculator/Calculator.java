@@ -1,7 +1,7 @@
 package calculator;
 import java.util.Scanner;
 /**
- * @author calc.Roman Minevich
+ * @author Roman Minevich
  * @version June 29, 2019
  */
 public class Calculator implements Arabic, Roman {

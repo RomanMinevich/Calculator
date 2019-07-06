@@ -9,7 +9,7 @@ interface Roman {
                 check += numeral.name().equals(operand) ? 1 : 0;
             }
         }
-        return check == 2 && operands.length == 2;
+        return check == 2;
     }
 
     default int parseRoman(String operand) {
@@ -51,7 +51,7 @@ interface Roman {
         digit1 = digit1.replace('X', 'C');
         digit1 = digit1.replace('V', 'L');
         digit1 = digit1.replace('I', 'X');
-        digit2 = (digit2 == null) ? "" : digit2;
+        digit2 = digit2 == null ? "" : digit2;
         return digit1.concat(digit2);
     }
 }

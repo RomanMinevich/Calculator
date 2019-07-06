@@ -14,7 +14,7 @@ public interface Arabic {
                     break;
             }
         }
-        return check == 2 && operands.length == 2;
+        return check == 2;
     }
 
     default int parseArabic(String operand) {
